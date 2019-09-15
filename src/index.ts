@@ -23,10 +23,7 @@ export default class Calendar {
     this.sdk = new Sdk();
   }
 
-  start() {
-    console.log('Calendar application started.');
-    this.widget = this.sdk.createWidget();
-
+  show() {
     let htmlString = "<div style=\"width:245px\"><div style=\"width:245px;text-align:center;padding-top:5px;border:1px solid white;height:35px;\">" + moment().month(moment().month()).format('MMMM') + " " + moment().year() + "</div>"
 
     for (var i = 0; i < moment().daysInMonth(); i++) {
@@ -38,6 +35,16 @@ export default class Calendar {
     htmlString += "</div>";
 
     this.widget.html(htmlString);
+  }
+
+  start() {
+    console.log('Calendar application started.');
+    this.widget = this.sdk.createWidget();
+
+    this.show();
+    setInterval(() => {
+      this.show();
+    }, 1800000);
   }
 }
 
