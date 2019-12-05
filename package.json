@@ -2,7 +2,6 @@
   "name": "calendar",
   "version": "1.0.0",
   "description": "Calendar application for Elios ",
-  "main": "dist/index.js",
   "scripts": {
     "start": "node ./dist/index.js",
     "build": "webpack --mode production",
@@ -21,19 +20,18 @@
   "homepage": "https://github.com/MrDarkSkil/module-template#readme",
   "dependencies": {
     "dom-parser": "^0.1.5",
-    "elios-sdk": "0.2.2",
+    "elios-sdk": "^1.1.1",
     "fs": "0.0.1-security",
     "html-loader": "^0.5.5",
     "imap": "^0.8.19",
     "moment": "^2.24.0",
-    "vue": "^2.5.17",
-    "weather.js": "^0.1.0"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@types/node": "^10.3.1",
     "css-loader": "^1.0.0",
+    "html-css-obfuscator": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-loader": "^0.6.0",
     "node-sass": "^4.9.3",
     "nodemon-webpack-plugin": "^4.1.1",
     "postcss-loader": "^3.0.0",
@@ -45,6 +43,7 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.4.1",
     "webpack": "^4.7.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }
